@@ -5,6 +5,11 @@ import { PasswordInput, TextInput, Group, Button, Box, createStyles, Anchor, Tex
 
 import Layout from '../../components/layout';
 
+
+interface ForgetPasswordProps {
+    
+}
+
 const useStyles = createStyles((theme) => ({
 
 }))
@@ -13,7 +18,7 @@ const schema = z.object({
     email: z.string().email({ message: 'Your email format is wrong' }),
 })
 
-const ForgetPassword = () => {
+const ForgetPassword = (props: ForgetPasswordProps) => {
     const [submitLoading, setSubmitLoading] = useState(false);
     const { classes } = useStyles();
 
